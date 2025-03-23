@@ -15,7 +15,7 @@ namespace _6_3
             double sellsum = Convert.ToDouble(Console.ReadLine());
             Console.Write("Введите количество проданных товаров: ");
             double totalcnt = Convert.ToDouble(Console.ReadLine());
-            string otbivka = new string('-', 27);
+            string otbivka = new ('-', 27);
 
             double midcost = sellsum / totalcnt;
 
@@ -25,7 +25,7 @@ namespace _6_3
             Console.WriteLine(otbivka);
             Console.WriteLine("\nОбщая сумма продаж: {0:N2} р.", sellsum);
             Console.WriteLine("\nКоличество проданных товаров: {0} шт.", totalcnt);
-            Console.WriteLine("\nСредняя стоимость товара: {0:N2} р.", midcost);
+            Console.WriteLine("\nСредняя стоимость товара: {0:N2} р.\n", midcost);
             Console.WriteLine(otbivka);
 
 
