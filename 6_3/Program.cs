@@ -6,25 +6,29 @@ namespace _6_3
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Введите предложение без знаков препинания, разделитель - пробел");
-            string vvod = Console.ReadLine();
-            string reverse = string.Empty;
 
-            string normal = vvod.Replace(" ", "");
-            normal = normal.ToLower();
+            Console.Write("Введите месяц: ");
+            string month = Console.ReadLine();
+            Console.Write("Введите год: ");
+            string year = Console.ReadLine();
+            Console.Write("Введите сумму продаж: ");
+            double sellsum = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Введите количество проданных товаров: ");
+            double totalcnt = Convert.ToDouble(Console.ReadLine());
+            string otbivka = new string('-', 27);
 
-            for (int i = normal.Length - 1; i >= 0; i--)
-            {
-                reverse += normal[i];
-            }
+            double midcost = sellsum / totalcnt;
 
-            Console.WriteLine("\n{0} - исходное предложение", normal);
-            Console.WriteLine("\n{0} - реверсивное предложение", reverse);
+            Console.Clear();
+            Console.WriteLine(otbivka);
+            Console.WriteLine("\nОтчёт о продажах за {0} {1}\n", month, year);
+            Console.WriteLine(otbivka);
+            Console.WriteLine("\nОбщая сумма продаж: {0:N2} р.", sellsum);
+            Console.WriteLine("\nКоличество проданных товаров: {0} шт.", totalcnt);
+            Console.WriteLine("\nСредняя стоимость товара: {0:N2} р.", midcost);
+            Console.WriteLine(otbivka);
 
-            if (reverse == normal)
-            {
-                Console.WriteLine("\nУРА! Это полиндром ! =)");
-            }
+
             Console.WriteLine("\nPress any key to continue");
             Console.ReadKey();
         }
