@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-namespace _6_2
+namespace _6_3
 {
     internal class Program
     {
